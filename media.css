@@ -1,10 +1,13 @@
 @media only screen and (min-width: 200px) and (max-width: 991px){
     header{
-        position: sticky;
+        position: fixed;
         top: 0;
         width: 100%;
     }
     html{
+        overflow-x: hidden;
+    }
+    body{
         overflow-x: hidden;
     }
     .logo{
@@ -58,14 +61,15 @@
     }
     .nav-bar ul li a{
         position: relative;
-        
         right: 20px;
         line-height: 2;
         color: red;
+        border-bottom: 2px solid white;
     }
     /* home */
     .slides{
         background-size: cover;
+        margin-top: 80px;
         min-height: 25rem;
 
     }
@@ -105,6 +109,65 @@
         width: 60%;
         left: 85px;
     }
+    /* screen */
+    .screencontainer .containers{
+        position: relative;
+        left: 8px;
+        width: 1000px;
+        overflow: hidden;
+    }
+    .slider{
+        display: flex;
+        transition: transform 0.8s ease;
+    }
+    .slider img{
+        max-width: 100%;  
+    }
+    .container #prev i{
+       position: relative;
+       font-size: 20px;
+       bottom: 180px; 
+       left: 2%;
+       cursor: pointer;
+       padding: 12px;
+       background-color: #070707;
+       color: #fff;
+        
+    }
+    .container #next i{
+        position: relative;
+        font-size: 20px;
+        left: 80%;
+        bottom: 180px;
+        cursor: pointer;
+        padding: 12px;
+        background-color: #070707;
+        color: #fff;
+    }
+    #next.disable{
+        pointer-events: none;
+        opacity: 0.5;
+    }
+    #prev.disable{
+        pointer-events: none;
+        opacity: 0.5;
+    }
+    .rosd1{
+        position: relative;
+        bottom: 10px;
+        left: 10%;
+        height: 60px;
+        width: 160px;
+        background-color: #070707;
+        color: #ffff;
+        border: none;
+        transition: all 1s ease;
+    }
+    .rosd1:hover{
+        color: #ffff;
+        background-color: #fc4311;
+        border-radius: 50px;
+    }
     /* service */
     .card{
         width: 24.6rem;
@@ -122,6 +185,7 @@
         left: 25%;
         top: 38%;
     }
+
     /* blog */
     .cardin{
         bottom: 209px;

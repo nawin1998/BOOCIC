@@ -197,7 +197,66 @@ header{
 .scree p{
     text-align: center;
 }
-
+.screencontainer .containers{
+    position: relative;
+    left: 15%;
+    width: 1000px;
+    overflow: hidden;
+}
+.slider{
+    display: flex;
+    transition: transform 0.8s ease;
+}
+.slider img{
+    max-width: 100%;
+    margin-right: 10px;
+    
+}
+.container #prev i{
+   position: relative;
+   font-size: 30px;
+   bottom: 360px; 
+   left: 5%;
+   cursor: pointer;
+   padding: 17px;
+   background-color: #070707;
+   color: #fff;
+    
+}
+.container #next i{
+    position: relative;
+    font-size: 30px;
+    left: 86%;
+    bottom: 360px;
+    cursor: pointer;
+    padding: 17px;
+    background-color: #070707;
+    color: #fff;
+}
+#next.disable{
+    pointer-events: none;
+    opacity: 0.5;
+}
+#prev.disable{
+    pointer-events: none;
+    opacity: 0.5;
+}
+.rosd1{
+    position: relative;
+    bottom: 60px;
+    left: 34%;
+    height: 60px;
+    width: 160px;
+    background-color: #070707;
+    color: #ffff;
+    border: none;
+    transition: all 1s ease;
+}
+.rosd1:hover{
+    color: #ffff;
+    background-color: #fc4311;
+    border-radius: 50px;
+}
 /* service */
 .serv h1{
     text-align: center;
@@ -243,7 +302,6 @@ header{
 }
 .carinn1 h3{
     position: relative;
-    
     top: 7px;
     text-align: center;
 }

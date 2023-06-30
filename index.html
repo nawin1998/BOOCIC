@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    
 </head>
 <body>
     <header>
@@ -109,22 +110,19 @@
                             using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
                     </div>
                 </div>
-                <!-- <div class="container">
+                
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="swiper">
-                                <div class="carouselslider">
-                                    <img src="images/blog-image.jpg">
-                                </div>
-                            </div>
+                        <div class="col-md-12 containers">
+                            <figure class="slider">
+                                <img src="images/banner.png" alt="">
+                                <img src="images/banner.png" alt="">
+                                <img src="images/banner.png" alt="">
+                            </figure>
                         </div>
                     </div>
-                </div> -->
-                
-                
-                        
-                    
-                </div>
+                    <span id="prev"><i class="fa-solid fa-chevron-left"></i></span>
+                    <span id="next"><i class="fa-solid fa-chevron-right"></i></span>
+                    <button class="rosd1">DOWNLOAD NOW</button>   
             </div>
         </section>
         <section class="servicecontainer" id="Service">
@@ -372,7 +370,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script>
+       <script>
         hamburger=document.querySelector(".hamburger");
          hamburger.onclick=function(){
          navBar=document.querySelector(".nav-bar");
@@ -393,7 +391,40 @@
             });
          
         // screen
-            
+            const prev = document.getElementById("prev");
+            const next = document.getElementById("next");
+            const slider = document.querySelector(".slider");
+            const imgs = document.querySelectorAll(".slider img");
+
+            let index = 0;
+            let width = imgs[index].clientWidth;
+
+            next.addEventListener("click", () =>{
+                index++;
+
+                slider.style.transform = `translate(${-index * (width + 10)}px)`
+                if (index === imgs.length -1) {
+                    next.classList.add("disable");
+                }else{
+                    prev.classList.remove("disable");
+                }
+               
+            });
+
+            prev.addEventListener("click", () =>{
+                index--;
+
+                slider.style.transform = `translate(${-index * (width + 10)}px)`
+                if (index === 0) {
+                    prev.classList.add("disable");
+                }else{
+                    next.classList.remove("disable")
+                }
+               
+            });
+
+            prev.classList.add("disable");
+
          // form
          const form = document.getElementById("form");
          var a=document.getElementById("first");
