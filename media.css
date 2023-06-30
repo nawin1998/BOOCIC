@@ -20,7 +20,7 @@
         height: 40px;
         padding: 0 130px;
         top: 20px;
-        right: 12rem;
+        right: 14rem;
         background-color: black;
         display: block;
         cursor: pointer;
@@ -137,7 +137,7 @@
     .container #next i{
         position: relative;
         font-size: 20px;
-        left: 80%;
+        left: 78%;
         bottom: 180px;
         cursor: pointer;
         padding: 12px;
@@ -170,8 +170,9 @@
     }
     /* service */
     .card{
-        width: 24.6rem;
+        width: 22rem;
         margin-top: 10px;
+        
     }  
     .card img{
         width: 24.6rem;
@@ -206,7 +207,7 @@
     }
     .cardin1 h5{
         position: relative;
-        left: 80px;
+        left: 75px;
         width: 16rem;
         top: 10px;
         font-size: 12px;
