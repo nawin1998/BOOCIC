@@ -62,50 +62,22 @@ header{
     color: black;
 }
 /* home */
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.slides{
-    background-image: url(images/banner2.jpg);
-    min-height: 46rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.caption{
-    position: absolute;
-    height: 250px;
-    width: 50rem;
+.carousel-caption{
+    position: relative;
+    height: 300px;
+    width: 66rem;
     top: 30%;
-    left: 24%;
     
 }
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.caption h1{
+.carousel-caption h1{
     color: #ffffff;
     font-size: 50px;
     font-weight: 700;
 }
-.caption p{
+.carousel-captionp{
     color: #ffffff;
 }
 .rosd{
-    
     height: 60px;
     width: 160px;
     background-color: #fc4311;
@@ -118,28 +90,10 @@ header{
     background-color: #ffff;
     border-radius: 50px;
 }
-.swiper-button-next{
-    padding: 28px;
-    border-radius: 50%;
-    background-color: #ffffff;
-}
-.swiper-button-prev{
-    padding: 28px;
-    border-radius: 50%;
-    background-color: #ffffff;
-}
-.swiper-button-prev:hover{
-    background-color: #fc4311;
-    color: #ffffff;
-}
-.swiper-button-next:hover{
-    background-color: #fc4311;
-    color: #ffffff;
-}
 .iconic1{
     position: absolute;
     z-index: 1;
-    top: 49.5rem;
+    top: 47.5rem;
     left: 49%;
     height: 50px;
     width: 50px;
